@@ -1,7 +1,14 @@
 import streamlit as st
+import folium
+from streamlit_folium import st_folium
 
-st.title("我的第一个 Streamlit 应用")
-st.write("你好，这个页面已经运行成功了！")
+m = folium.Map(location=[51.05, 13.73], zoom_start=12)
 
-name = st.text_input("请输入你的名字")
-st.write("欢迎你：", name)
+folium.Marker(
+    [51.05, 13.73],
+    popup="Dresden"
+).add_to(m)
+
+st.title("Folium 地图")
+
+st_folium(m, width=700, height=500)

@@ -13,7 +13,6 @@ import time
 import json
 
 # setup environment variables
-# env_path = r"C:\Users\28472\Desktop\ney way\Neues Leben\TU Dresden\Kurse\KI-basierte Geoinformationsdienste\Projekt\env1.env"
 load_dotenv()
 
 # definieren einen llm-Model

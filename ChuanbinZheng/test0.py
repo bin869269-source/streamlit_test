@@ -13,6 +13,7 @@ import time
 import json
 
 # setup environment variables
+# setup environment variables
 load_dotenv()
 
 # definieren einen llm-Model

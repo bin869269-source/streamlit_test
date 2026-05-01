@@ -32,7 +32,10 @@ except Exception:
 # definieren einen llm-Model
 llm = ChatOpenAI(
     model="deepseek-chat",
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    # try:
+    api_key=st.secrets["DEEPSEEK_API_KEY"],
+    # except Exception:
+    #     api_key=os.getenv("DEEPSEEK_API_KEY"),
     base_url="https://api.deepseek.com"
 )
 

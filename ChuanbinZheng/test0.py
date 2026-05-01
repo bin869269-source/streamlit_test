@@ -14,12 +14,20 @@ import json
 
 # setup environment variables
 # load_dotenv()
-if hasattr(st,"secrets"):
-    for key in st.secrets:
-        os.environ[key] = str(st.secrets[key])
-else:
+try:
+    secrets = st.secrets
+    if secrets:
+        for key in secrets:
+            os.environ[key] = str(secrets[key])
+except Exception:
     env_path = r"C:\Users\28472\Desktop\ney way\Neues Leben\TU Dresden\Kurse\KI-basierte Geoinformationsdienste\Projekt\env1.env"
-    load_dotenv(Path(env_path))  
+    load_dotenv(Path(env_path)) 
+# if hasattr(st,"secrets") and dict(st.secrets):
+#     for key in st.secrets:
+#         os.environ[key] = str(st.secrets[key])
+# else:
+#     env_path = r"C:\Users\28472\Desktop\ney way\Neues Leben\TU Dresden\Kurse\KI-basierte Geoinformationsdienste\Projekt\env1.env"
+#     load_dotenv(Path(env_path))  
 
 # definieren einen llm-Model
 llm = ChatOpenAI(

@@ -1,10 +1,6 @@
 streamlit
 folium
-streamlit_folium
-dotenv
-pathlib
+streamlit-folium
+python-dotenv
 langchain
-langchain_openai
-os
-json
-time
+langchain-openai

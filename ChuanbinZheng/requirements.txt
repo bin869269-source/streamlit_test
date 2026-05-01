@@ -3,7 +3,7 @@ folium
 streamlit_folium
 dotenv
 pathlib
-langchain.agents
+langchain
 langchain_openai
 os
 json
